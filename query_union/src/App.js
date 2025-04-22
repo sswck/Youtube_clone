@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TopBar from "./components/TopBar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +19,15 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Router>
+        <TopBar /> {/* 상단바 */}
+        <Routes>
+          <Route></Route> {/* 홈페이지 라우트 */}
+          <Route></Route> {/* 채널 페이지 라우트 */}
+          <Route></Route> {/* 영상 재생 페이지 라우트 */}
+        </Routes>
+      </Router>
     </div>
   );
 }
